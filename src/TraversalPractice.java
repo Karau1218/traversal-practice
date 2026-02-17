@@ -13,15 +13,16 @@ public class TraversalPractice {
 
     
     if (node == null) return;
+    printOddNodes(node.left);
+    printOddNodes(node.right);
 
-    if (node.value / 2 != 0) {
-      printOddNodes(node.left);
-      printOddNodes(node.right);
-
+    if (node.value % 2 != 0) {
       System.out.println(node.value);
+    }
+      
       
   }
-}
+
 
   /**
    * Prints the values of the nodes that have exactly one child in a tree.
