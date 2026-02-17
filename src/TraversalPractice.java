@@ -1,3 +1,5 @@
+
+
 public class TraversalPractice {
   
   /**
@@ -8,8 +10,18 @@ public class TraversalPractice {
    * @param node The root of the tree to print
    */
   public static void printOddNodes(Node<Integer> node) {
+
     
+    if (node == null) return;
+
+    if (node.value / 2 != 0) {
+      printOddNodes(node.left);
+      printOddNodes(node.right);
+
+      System.out.println(node.value);
+      
   }
+}
 
   /**
    * Prints the values of the nodes that have exactly one child in a tree.
@@ -32,6 +44,9 @@ public class TraversalPractice {
    * @return the sum 
    */
   public static int treeSum(Node<Integer> node) {
+
+
+  
     return 0;
   }
 
