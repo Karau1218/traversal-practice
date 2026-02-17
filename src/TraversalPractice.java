@@ -8,7 +8,7 @@ public class TraversalPractice {
    * @param node The root of the tree to print
    */
   public static void printOddNodes(Node<Integer> node) {
-
+b 
   }
 
   /**
