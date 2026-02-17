@@ -1,3 +1,6 @@
+
+import javax.swing.text.Position;
+
 public class TraversalPractice {
   
   /**
@@ -8,7 +11,15 @@ public class TraversalPractice {
    * @param node The root of the tree to print
    */
   public static void printOddNodes(Node<Integer> node) {
-b 
+    if (node == null) return;
+
+    if (node.value / 2 != 0) {
+      post.order(node.left);
+      post.order(node.right);
+
+      System.out.println(node.value);
+
+
   }
 
   /**
@@ -32,6 +43,9 @@ b
    * @return the sum 
    */
   public static int treeSum(Node<Integer> node) {
+
+
+  
     return 0;
   }
 
