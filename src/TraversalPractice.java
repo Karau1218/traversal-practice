@@ -115,7 +115,7 @@ public class TraversalPractice {
 
 
 
-  public static void main(String[] args) { //Fredrick //Ebtisam
+  public static void main(String[] args) { 
     /*
      *         99
      *       /    \
@@ -126,15 +126,15 @@ public class TraversalPractice {
 
      // Replace the below line to create a tree 
      // as represented in the diagram above
-     Node<Integer> smallTree = new Node<>(99,  // main root, start here
-      new Node<>(45,    // left child of 99
-        new Node<>(9,null, null),//left child of 45
-          new Node<>(5, null, null)),// right child of 45
-            new Node<>(82, null, // right child of 99
-              new Node<> (16, null, null))); // right child of 82
+     Node<Integer> smallTree = new Node<Integer>(99, null, null);// main root, start here
+      smallTree.left = new Node<>(45, null, null);   // left child of 99
+      smallTree.left.left = new Node<>(9,null, null);//left child of 45
+      smallTree.left.right = new Node<>(5, null, null);// right child of 45
+      smallTree.right = new Node<>(82, null, null); // right child of 99
+      smallTree.right.right = new Node<> (16, null, null); // right child of 82
 
               
-     
+     //System.out.println(treeSum(smallTree));
 
 
     /*
@@ -147,18 +147,20 @@ public class TraversalPractice {
      *   3    19   25     76
     */
 
-    Node<Integer> largeTree = new Node<>(42,
-        new Node<>(17, // 17 is left child of 42
-                new Node<>(9, // 9 is the left child of 17
-                        new Node<>(3, null, null), // 3 is the left child of 9
-                        null), // no right child of 9
-                new Node<>(21, // 21 is the right child of 17
-                        new Node<>(19, null, null), // 19 is the left child of 21
-                        new Node<>(25, null, null))), // 25 is the right child of 21
-        new Node<>(63, // 63 is right child of 42
-                null, // no left child of 63
-                new Node<>(87, // 87 is right child of 63
-                        new Node<>(76, null, null), // 76 is the left child of 87
-                        null))); // no right child of 87
+    Node<Integer> largeTree = new Node<Integer>(42, null, null);
+    largeTree.left = new Node<>(17,null, null); // 17 is left child of 42
+      largeTree.left.left = new Node<>(9, null, null); // 9 is the left child of 17
+      largeTree.left.left.left = new Node<>(3, null, null);// 3 is the left child of 9
+                        //null), // no right child of 9
+      largeTree.left.right = new Node<>(21,null, null); // 21 is the right child of 17
+      largeTree.left.right.left = new Node<>(19, null, null); // 19 is the left child of 21
+      largeTree.left.right.right = new Node<>(25, null, null); // 25 is the right child of 21
+      largeTree.right = new Node<>(63, null, null); // 63 is right child of 42
+                //null, // no left child of 63
+      largeTree.right.right = new Node<>(87, null, null);// 87 is right child of 63
+      largeTree.right.right.left = new Node<>(76, null, null);// 76 is the left child of 87
+                       // null))); // no right child of 87
+
+                  System.out.println(maxVal(largeTree));
   }
 }
