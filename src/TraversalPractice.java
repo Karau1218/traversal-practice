@@ -29,7 +29,7 @@ public class TraversalPractice {
    * @param <T> The type of value the nodes hold
    * @param node The root of the tree to print
    */
-  public static <T> void printNodesWithOneChild(Node<T> node) { //Fredrick
+  public static <T> void printNodesWithOneChild(Node<T> node) { 
     if (node == null) return;
 
     // check for one child in both sides
