@@ -104,6 +104,8 @@ public class TraversalPractice {
     return 0;
   }
 
+  
+
   public static void main(String[] args) { //Fredrick //Ebtisam
     /*
      *         99
