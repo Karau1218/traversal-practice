@@ -10,8 +10,6 @@ public class TraversalPractice {
    * @param node The root of the tree to print
    */
   public static void printOddNodes(Node<Integer> node) {
-
-    
     if (node == null) return;
     printOddNodes(node.left);
     printOddNodes(node.right);
@@ -19,7 +17,6 @@ public class TraversalPractice {
     if (node.value % 2 != 0) {
       System.out.println(node.value);
     }
-      
       
   }
 
@@ -32,10 +29,13 @@ public class TraversalPractice {
    * @param <T> The type of value the nodes hold
    * @param node The root of the tree to print
    */
-  public static <T> void printNodesWithOneChild(Node<T> node) {
-    //Fredrick
-  }
+  public static <T> void printNodesWithOneChild(Node<T> node) { //Fredrick
+    if (node == null) return;
 
+    printNodesWithOneChild(node.left);
+    printNodesWithOneChild(node.left);
+
+  }
     /**
    * Returns the sum of the values of all nodes in a tree.
    * Edge Case:
@@ -61,8 +61,26 @@ public class TraversalPractice {
    * @return the max value
    */
   public static int maxVal(Node<Integer> node) { //Fredrick
-    return 0;
-  }
+    if (node == null) return 0;
+
+      int max = node.value; // right now this is the max then:
+
+    int leftMax = maxVal(node.left); // find max in left
+    int rightMax = maxVal(node.right); // find max in right
+
+    if (leftMax > max) {
+        max = leftMax;
+    }
+
+    if (rightMax > max) {
+        max = rightMax;
+    }
+
+    return max;
+}
+  
+
+
 
   /**
    * Returns the number of levels in the tree.
