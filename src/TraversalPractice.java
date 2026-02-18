@@ -71,7 +71,7 @@ public class TraversalPractice {
    * @param node The root of the tree
    * @return the max value
    */
-  public static int maxVal(Node<Integer> node) { //Fredrick
+  public static int maxVal(Node<Integer> node) { 
     if (node == null) return 0;
 
       int max = node.value; // right now this is the max then:
@@ -102,8 +102,15 @@ public class TraversalPractice {
    * @param node The root of the tree
    * @return The number of levels in the tree
    */
-  public static <T> int numLevels(Node<T> node) { //Ebtisam
-    return 0;
+  public static <T> int numLevels(Node<T> node) { 
+    if(node == null) return 0;
+
+    int leftLevels = numLevels(node.left);
+    int rightlevels = numLevels(node.right);
+
+
+
+    return Math.max(leftLevels, rightlevels)+ 1;
   }
 
 
