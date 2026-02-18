@@ -32,8 +32,17 @@ public class TraversalPractice {
   public static <T> void printNodesWithOneChild(Node<T> node) { //Fredrick
     if (node == null) return;
 
+    // check for one child in both sides
+    if ((node.left == null && node.right != null) ||  (node.left != null && node.right == null)) {
+        System.out.println(node.value);
+    }
+
+    // Recurse on left and right children
     printNodesWithOneChild(node.left);
-    printNodesWithOneChild(node.left);
+    printNodesWithOneChild(node.right);
+}
+
+     
 
   }
     /**
